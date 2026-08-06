@@ -1,0 +1,51 @@
+package com.coforge.training.flipzon.adminservice.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import com.coforge.training.flipzon.adminservice.dto.OrderDTO;
+import com.coforge.training.flipzon.adminservice.dto.ProductDTO;
+import com.coforge.training.flipzon.adminservice.dto.UserDTO;
+import com.coforge.training.flipzon.adminservice.service.AdminService;
+
+@CrossOrigin(origins = "http://localhost:4200")
+@RestController
+@RequestMapping("/admin")
+
+public class AdminController {
+
+    @Autowired
+    private AdminService adminService;
+
+    @GetMapping("/users/{id}")
+    public UserDTO getUserById(@PathVariable Long id) {
+        return adminService.getUserById(id);
+    }
+
+    @GetMapping("/products")
+    public List<ProductDTO> getAllProducts() {
+        return adminService.getAllProducts();
+    }
+
+    @GetMapping("/products/{id}")
+    public ProductDTO getProductById(@PathVariable Long id) {
+        return adminService.getProductById(id);
+    }
+
+    @DeleteMapping("/products/{id}")
+    public String deleteProduct(@PathVariable Long id) {
+        return adminService.deleteProduct(id);
+    }
+
+    @GetMapping("/orders/{id}")
+    public OrderDTO getOrderById(@PathVariable Long id) {
+        return adminService.getOrderById(id);
+    }
+
+    @GetMapping("/orders/user/{userId}")
+    public List<OrderDTO> getOrdersByUser(@PathVariable Long userId) {
+        return adminService.getOrdersByUser(userId);
+    }
+}

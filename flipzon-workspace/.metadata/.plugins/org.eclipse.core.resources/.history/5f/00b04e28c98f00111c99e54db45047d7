@@ -1,0 +1,102 @@
+package com.coforge.training.flipzon.userservice.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import com.coforge.training.flipzon.userservice.dto.ForgotPasswordRequest;
+import com.coforge.training.flipzon.userservice.dto.LoginRequest;
+import com.coforge.training.flipzon.userservice.dto.RegisterRequest;
+import com.coforge.training.flipzon.userservice.dto.UserResponse;
+import com.coforge.training.flipzon.userservice.response.ApiResponse;
+import com.coforge.training.flipzon.userservice.service.UserService;
+
+import jakarta.validation.Valid;
+
+@CrossOrigin(origins = "http://localhost:4200")
+@RestController
+@RequestMapping("/users")
+
+public class UserController {
+
+    @Autowired
+    private UserService userService;
+
+    // Register User
+    @PostMapping("/register")
+    public ResponseEntity<ApiResponse> registerUser(
+            @Valid @RequestBody RegisterRequest request) {
+
+        System.out.println("REGISTER API CALLED");
+
+        UserResponse user = userService.register(request);
+
+        ApiResponse response =
+                new ApiResponse(true,
+                        "User Registered Successfully",
+                        user);
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+
+    // Login User
+    @PostMapping("/login")
+    public ResponseEntity<ApiResponse> loginUser(@Valid @RequestBody LoginRequest request) {
+
+        String message = userService.login(request);
+
+        ApiResponse response = new ApiResponse(
+                true,
+                message,
+                null);
+
+        return ResponseEntity.ok(response);
+    }
+
+    // Forgot Password
+    @PutMapping("/forgot-password")
+    public ResponseEntity<ApiResponse> forgotPassword(@Valid
+            @RequestBody ForgotPasswordRequest request) {
+
+        String message = userService.forgotPassword(request);
+
+        ApiResponse response = new ApiResponse(
+                true,
+                message,
+                null);
+
+        return ResponseEntity.ok(response);
+    }
+
+    // Get User Profile
+    @GetMapping("/{id}")
+    public ResponseEntity<ApiResponse> getUserById(@PathVariable Long id) {
+
+        UserResponse user = userService.getUserById(id);
+
+        ApiResponse response = new ApiResponse(
+                true,
+                "User Details Retrieved Successfully",
+                user);
+
+        return ResponseEntity.ok(response);
+    }
+
+    // Update User Profile
+    @PutMapping("/{id}")
+    public ResponseEntity<ApiResponse> updateUser(
+            @PathVariable Long id,  @Valid
+            @RequestBody RegisterRequest request) {
+
+        UserResponse user = userService.updateUser(id, request);
+
+        ApiResponse response = new ApiResponse(
+                true,
+                "User Updated Successfully",
+                user);
+
+        return ResponseEntity.ok(response);
+    }
+
+}

@@ -1,0 +1,5 @@
+package com.coforge.training.flipzon.orderservice.service;
+
+public class OrderService {
+
+}

@@ -1,0 +1,41 @@
+2026-07-30 16:25:24.029: [INFO] OnDoneLoading sync enabled: 0
+2026-07-30 16:25:38.340: [INFO] OnDoneLoading sync enabled: 0
+2026-07-30 16:33:38.929: [INFO] OnDoneLoading sync enabled: 0
+2026-07-30 16:42:13.258: [INFO] OnDoneLoading sync enabled: 0
+2026-07-30 16:44:12.418: [INFO] OnDoneLoading sync enabled: 0
+2026-07-30 16:51:38.057: [INFO] OnDoneLoading sync enabled: 0
+2026-07-30 17:04:48.040: [INFO] OnDoneLoading sync enabled: 0
+2026-07-30 17:06:05.947: [INFO] OnDoneLoading sync enabled: 0
+2026-07-30 17:06:13.777: [INFO] OnDoneLoading sync enabled: 0
+2026-07-30 17:08:36.117: [INFO] OnDoneLoading sync enabled: 0
+2026-07-30 17:10:31.253: [INFO] OnDoneLoading sync enabled: 0
+2026-07-30 17:28:33.088: [INFO] OnDoneLoading sync enabled: 0
+2026-07-30 17:28:50.981: [INFO] OnDoneLoading sync enabled: 0
+2026-08-02 10:22:11.605: [INFO] OnDoneLoading sync enabled: 0
+2026-08-02 10:51:27.944: [INFO] OnDoneLoading sync enabled: 0
+2026-08-02 17:19:15.507: [INFO] OnDoneLoading sync enabled: 0
+2026-08-04 04:05:51.202: [INFO] OnDoneLoading sync enabled: 0
+2026-08-04 04:24:05.427: [INFO] OnDoneLoading sync enabled: 0
+2026-08-04 04:24:37.904: [INFO] OnDoneLoading sync enabled: 0
+2026-08-04 06:35:46.333: [INFO] OnDoneLoading sync enabled: 0
+2026-08-04 10:32:45.578: [INFO] OnDoneLoading sync enabled: 0
+2026-08-06 04:41:30.284: [INFO] CurrentProfilePath: D:\Training\flipzon-workspace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-06 04:41:30.284: [INFO] Profiles total count: 1
+2026-08-06 04:41:30.285: [INFO] Profile: name=Profile 1 path=D:\Training\flipzon-workspace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-08-04T10:32:52.597Z
+2026-08-06 04:41:30.285: [INFO] LastUsedProfileDir: D:\Training\flipzon-workspace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-06 04:41:30.285: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=D:\Training\flipzon-workspace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-08-04T10:32:52.597Z
+2026-08-06 04:41:30.285: [INFO] OnDoneLoading sync enabled: 0
+2026-08-06 04:41:30.285: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-06 04:41:30.286: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-06 04:41:30.286: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-06 05:05:51.284: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-06 05:08:01.597: [INFO] CurrentProfilePath: D:\Training\flipzon-workspace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-06 05:08:01.597: [INFO] Profiles total count: 1
+2026-08-06 05:08:01.597: [INFO] Profile: name=Profile 1 path=D:\Training\flipzon-workspace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-08-06T05:01:02.973Z
+2026-08-06 05:08:01.597: [INFO] LastUsedProfileDir: D:\Training\flipzon-workspace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default
+2026-08-06 05:08:01.597: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=D:\Training\flipzon-workspace\.metadata\.plugins\org.eclipse.swt\EBWebView\Default lastActive=2026-08-06T05:01:02.973Z
+2026-08-06 05:08:01.597: [INFO] OnDoneLoading sync enabled: 0
+2026-08-06 05:08:01.597: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-08-06 05:08:01.597: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-08-06 05:08:01.597: [INFO] BookmarksSnapshot Startup total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-08-06 05:08:25.418: [INFO] BookmarksSnapshot Shutdown total=0 bar=0 other=0 mobile=0 showBar=0 showBarNTP=1

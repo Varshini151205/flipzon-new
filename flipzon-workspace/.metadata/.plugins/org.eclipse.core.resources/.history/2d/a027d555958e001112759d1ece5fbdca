@@ -1,0 +1,5 @@
+package com.coforge.training.flipzon.adminservice.dto;
+
+public class OrderDTO {
+
+}

@@ -1,0 +1,5 @@
+package com.coforge.training.flipzon.cartservice.repository;
+
+public class CartRepository {
+
+}

@@ -1,0 +1,5 @@
+package com.coforge.training.flipzon.cartservice.serviceimpl;
+
+public class AdminServiceImpl {
+
+}
