@@ -1,0 +1,16 @@
+package com.coforge.training.flipzon.userservice.service;
+
+import com.coforge.training.flipzon.userservice.model.User;
+
+public interface UserService {
+
+    User register(User user);
+
+    User login(String email, String password);
+
+    User getUserById(Long id);
+
+    User updateUser(Long id, User user);
+
+    void forgotPassword(String email, String newPassword);
+}

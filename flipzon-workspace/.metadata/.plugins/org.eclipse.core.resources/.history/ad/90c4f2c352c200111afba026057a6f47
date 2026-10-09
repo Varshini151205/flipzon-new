@@ -1,0 +1,5 @@
+package com.coforge.training.flipzon.userservice.service;
+
+public class UserService {
+
+}

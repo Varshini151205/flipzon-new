@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
-    <entry loc="C:\Program Files\Java\jdk-17" stamp="1783068107568"/>
     <entry loc="C:\SetupFiles\JAVA\jdk-1.8" stamp="1770648331796"/>
-    <entry loc="C:\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.11.v20260515-1531\jre" stamp="1783138478016"/>
+    <entry loc="C:\Users\sirin\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.11.v20260515-1531\jre" stamp="1784529372981"/>
+    <entry loc="C:\Program Files\Java\jdk-20" stamp="1680612939803"/>
+    <entry loc="C:\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.12.v20260826-1216\jre" stamp="1788159185984"/>
+    <entry loc="C:\Program Files\Java\jdk-21.0.12.1" stamp="1788247100321"/>
     <entry loc="C:\Program Files\Java\jdk-26.0.1" stamp="1783067978615"/>
-    <entry loc="C:\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.11.v20260515-1531" stamp="1783138938223"/>
+    <entry loc="C:\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.12.v20260826-1216" stamp="1788159185986"/>
+    <entry loc="C:\Program Files\Java\jdk-17" stamp="1783068107568"/>
+    <entry loc="C:\Users\sirin\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.11.v20260515-1531" stamp="1784529372981"/>
+    <entry loc="C:\Program Files\Java\jdk-23" stamp="1732695887050"/>
+    <entry loc="C:\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.11.v20260515-1531\jre" stamp="1783138478016"/>
+    <entry loc="C:\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.11.v20260515-1531" stamp="1783138473662"/>
 </dirs>

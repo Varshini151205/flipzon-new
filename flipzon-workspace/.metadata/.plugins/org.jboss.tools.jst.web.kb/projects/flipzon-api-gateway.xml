@@ -106,11 +106,11 @@
    <libraries>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-spring-webmvc-7.0.8.jar/meta-inf/spring-form.tld" project="flipzon-api-gateway"/>
+      path="FileSystems/lib-spring-webmvc-7.0.8.jar/meta-inf/spring-form.tld" project="flipzon-admin-service"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-spring-webmvc-7.0.8.jar/meta-inf/spring.tld" project="flipzon-api-gateway"/>
+      path="FileSystems/lib-spring-webmvc-7.0.8.jar/meta-inf/spring.tld" project="flipzon-admin-service"/>
     </library>
    </libraries>
   </path>
@@ -144,7 +144,6 @@
   <path value="C:/Users/user/.m2/repository/org/junit/jupiter/junit-jupiter-api/6.0.3/junit-jupiter-api-6.0.3.jar"/>
  </paths>
  <validation>
-  <core validator-id="jboss.cdi.core"/>
   <el>
    <linked-el length="23" name="%0" offset="1953" path="%1"/>
    <linked-el length="23" name="%2" offset="1953" path="%1"/>

@@ -65,8 +65,8 @@
   <path value="C:/Users/user/.m2/repository/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar"/>
   <path value="C:/Users/user/.m2/repository/org/eclipse/angus/angus-activation/2.0.3/angus-activation-2.0.3.jar"/>
   <path value="C:/Users/user/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar"/>
-  <path value="C:/Users/user/.m2/repository/com/google/errorprone/error_prone_annotations/2.41.0/error_prone_annotations-2.41.0.jar"/>
   <path value="C:/Users/user/.m2/repository/org/springframework/security/spring-security-crypto/7.1.0/spring-security-crypto-7.1.0.jar"/>
+  <path value="C:/Users/user/.m2/repository/com/google/errorprone/error_prone_annotations/2.41.0/error_prone_annotations-2.41.0.jar"/>
   <path value="C:/Users/user/.m2/repository/org/springframework/boot/spring-boot/4.1.0/spring-boot-4.1.0.jar"/>
   <path value="C:/Users/user/.m2/repository/com/google/code/gson/gson/2.13.2/gson-2.13.2.jar"/>
   <path value="C:/Users/user/.m2/repository/org/springframework/boot/spring-boot-hibernate/4.1.0/spring-boot-hibernate-4.1.0.jar"/>
@@ -137,11 +137,11 @@
    <libraries>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-spring-webmvc-7.0.8.jar/meta-inf/spring-form.tld" project="flipzon-api-gateway"/>
+      path="FileSystems/lib-spring-webmvc-7.0.8.jar/meta-inf/spring-form.tld" project="flipzon-admin-service"/>
     </library>
     <library class="tld">
      <id class="model-object"
-      path="FileSystems/lib-spring-webmvc-7.0.8.jar/meta-inf/spring.tld" project="flipzon-api-gateway"/>
+      path="FileSystems/lib-spring-webmvc-7.0.8.jar/meta-inf/spring.tld" project="flipzon-admin-service"/>
     </library>
    </libraries>
   </path>
@@ -179,11 +179,10 @@
   <path value="C:/Users/user/.m2/repository/org/junit/jupiter/junit-jupiter-api/6.0.3/junit-jupiter-api-6.0.3.jar"/>
  </paths>
  <validation>
-  <core validator-id="jboss.cdi.core"/>
   <el>
-   <linked-el length="23" name="%0" offset="2814" path="%1"/>
-   <linked-el length="23" name="%2" offset="2814" path="%1"/>
-   <linked-el length="23" name="%3" offset="2814" path="%1"/>
+   <linked-el length="23" name="%0" offset="2681" path="%1"/>
+   <linked-el length="23" name="%2" offset="2681" path="%1"/>
+   <linked-el length="23" name="%3" offset="2681" path="%1"/>
   </el>
  </validation>
  <aliases>

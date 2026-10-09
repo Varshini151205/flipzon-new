@@ -1,0 +1,183 @@
+package com.coforge.training.flipzon.productservice.service.impl;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
+
+import com.coforge.training.flipzon.productservice.dto.ProductDTO;
+import com.coforge.training.flipzon.productservice.model.Category;
+import com.coforge.training.flipzon.productservice.model.Product;
+import com.coforge.training.flipzon.productservice.repository.CategoryRepository;
+import com.coforge.training.flipzon.productservice.repository.ProductRepository;
+import com.coforge.training.flipzon.productservice.service.ProductService;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+
+    private final ProductRepository productRepository;
+    private final CategoryRepository categoryRepository;
+
+    public ProductServiceImpl(ProductRepository productRepository,
+                              CategoryRepository categoryRepository) {
+        this.productRepository = productRepository;
+        this.categoryRepository = categoryRepository;
+    }
+
+    @Override
+    public ProductDTO addProduct(ProductDTO productDTO) {
+
+        Category category = categoryRepository.findById(productDTO.getCategoryId())
+                .orElseThrow(() -> new RuntimeException("Category not found"));
+
+        Product product = new Product();
+
+        BeanUtils.copyProperties(productDTO, product);
+
+        product.setCategory(category);
+
+        Product savedProduct = productRepository.save(product);
+
+        ProductDTO response = new ProductDTO();
+
+        BeanUtils.copyProperties(savedProduct, response);
+
+        response.setCategoryId(savedProduct.getCategory().getCategoryId());
+
+        return response;
+    }
+
+    @Override
+    public List<ProductDTO> getAllProducts() {
+
+        List<Product> products = productRepository.findAll();
+
+        return products.stream().map(product -> {
+
+            ProductDTO dto = new ProductDTO();
+
+            BeanUtils.copyProperties(product, dto);
+
+            dto.setCategoryId(product.getCategory().getCategoryId());
+
+            return dto;
+
+        }).collect(Collectors.toList());
+    }
+
+    @Override
+    public ProductDTO getProductById(Long productId) {
+
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new RuntimeException("Product not found"));
+
+        ProductDTO dto = new ProductDTO();
+
+        BeanUtils.copyProperties(product, dto);
+
+        dto.setCategoryId(product.getCategory().getCategoryId());
+
+        return dto;
+    }
+
+    @Override
+    public ProductDTO updateProduct(Long productId, ProductDTO productDTO) {
+
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new RuntimeException("Product not found"));
+
+        Category category = categoryRepository.findById(productDTO.getCategoryId())
+                .orElseThrow(() -> new RuntimeException("Category not found"));
+
+        product.setProductName(productDTO.getProductName());
+        product.setDescription(productDTO.getDescription());
+        product.setPrice(productDTO.getPrice());
+        product.setStock(productDTO.getStock());
+        product.setBrand(productDTO.getBrand());
+        product.setImageUrl(productDTO.getImageUrl());
+        product.setStatus(productDTO.getStatus());
+        product.setCategory(category);
+
+        Product updatedProduct = productRepository.save(product);
+
+        ProductDTO dto = new ProductDTO();
+
+        BeanUtils.copyProperties(updatedProduct, dto);
+
+        dto.setCategoryId(updatedProduct.getCategory().getCategoryId());
+
+        return dto;
+    }
+
+    @Override
+    public void deleteProduct(Long productId) {
+
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new RuntimeException("Product not found"));
+
+        productRepository.delete(product);
+    }
+    
+    
+    @Override
+    public List<ProductDTO> searchProducts(String keyword) {
+
+        List<Product> products =
+                productRepository.findByProductNameContainingIgnoreCaseOrDescriptionContainingIgnoreCase(
+                        keyword,
+                        keyword);
+
+        return products.stream().map(product -> {
+
+            ProductDTO dto = new ProductDTO();
+
+            BeanUtils.copyProperties(product, dto);
+
+            dto.setCategoryId(product.getCategory().getCategoryId());
+
+            return dto;
+
+        }).collect(Collectors.toList());
+
+    }
+    
+    @Override
+    public List<ProductDTO> filterByBrand(String brand) {
+
+        List<Product> products = productRepository.findByBrandIgnoreCase(brand);
+
+        return products.stream().map(product -> {
+
+            ProductDTO dto = new ProductDTO();
+
+            BeanUtils.copyProperties(product, dto);
+
+            dto.setCategoryId(product.getCategory().getCategoryId());
+
+            return dto;
+
+        }).collect(Collectors.toList());
+
+    }
+    
+    @Override
+    public List<ProductDTO> filterByPrice(Double minPrice, Double maxPrice) {
+
+        List<Product> products = productRepository.findByPriceBetween(minPrice, maxPrice);
+
+        return products.stream().map(product -> {
+
+            ProductDTO dto = new ProductDTO();
+
+            BeanUtils.copyProperties(product, dto);
+
+            dto.setCategoryId(product.getCategory().getCategoryId());
+
+            return dto;
+
+        }).collect(Collectors.toList());
+
+    }
+
+}

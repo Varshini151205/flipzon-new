@@ -1,0 +1,76 @@
+package com.coforge.training.flipzon.userservice.service;
+
+import org.springframework.stereotype.Service;
+
+import com.coforge.training.flipzon.userservice.model.User;
+import com.coforge.training.flipzon.userservice.repository.UserRepository;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+    private final UserRepository userRepository;
+
+    public UserServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    @Override
+    public User register(User user) {
+
+        if (userRepository.existsByEmail(user.getEmail())) {
+            throw new RuntimeException("Email already registered");
+        }
+
+        return userRepository.save(user);
+    }
+
+    @Override
+    public User login(String email, String password) {
+
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Invalid email or password"));
+
+        if (!user.getPassword().equals(password)) {
+            throw new RuntimeException("Invalid email or password");
+        }
+
+        return user;
+    }
+
+    @Override
+    public User getUserById(Long id) {
+
+        return userRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+    }
+
+    @Override
+    public User updateUser(Long id, User updatedUser) {
+
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        user.setFirstName(updatedUser.getFirstName());
+        user.setLastName(updatedUser.getLastName());
+        user.setPhone(updatedUser.getPhone());
+        user.setGender(updatedUser.getGender());
+        user.setDateOfBirth(updatedUser.getDateOfBirth());
+        user.setAddress(updatedUser.getAddress());
+        user.setCity(updatedUser.getCity());
+        user.setState(updatedUser.getState());
+        user.setPincode(updatedUser.getPincode());
+
+        return userRepository.save(user);
+    }
+
+    @Override
+    public void forgotPassword(String email, String newPassword) {
+
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Email not found"));
+
+        user.setPassword(newPassword);
+
+        userRepository.save(user);
+    }
+}
